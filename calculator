@@ -1,0 +1,33 @@
+def calculate():
+    # Get user input for numbers
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+
+    # Get user input for operation
+    operation = input("Choose an operation (+, -, *, /): ")
+
+    # Perform the calculation based on the selected operation
+    if operation == '+':
+        result = num1 + num2
+    elif operation == '-':
+        result = num1 - num2
+    elif operation == '*':
+        result = num1 * num2
+    elif operation == '/':
+        result = num1 / num2
+    else:
+        print("Invalid operation")
+        return
+
+    # Display the result
+    print(f"{num1} {operation} {num2} = {result}")
+
+calculate()
+
+# Check if the user wants to perform another calculation
+while True:
+    choice = input("Do you want to perform another calculation (y/n)? ")
+    if choice.lower() != 'y':
+        break
+    else:
+        calculate()
